@@ -2,88 +2,90 @@
 {% block content %}
 <style>
 body {
-    font-family: Cambria;
-    height: 100%;
-    background-image: linear-gradient(#4e0374, #c37ee6);
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    font-family: 'Bogle';
+        height: 100vh;
+        background-image: url('https://wallpaperaccess.com/full/899156.jpg'); /* Replace with an actual healthcare background image URL */
+        background-size: cover; /* Adjust background size to cover the entire viewport */
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
 }
 </style>
 <div class="row" style="margin-bottom: 72px;">
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <center><h1 style="color:white;">Heart Disease Predictor</h1></center>
-        <div class="card card-body" style="border: 1px solid black; background-color: #daa8f4">
+        <div class="card card-body" style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
             <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="age" placeholder="Age (in years)">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="age" placeholder="Age (in years)">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="sex" placeholder="Sex (1 = Male; 0 = Female)">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="cp" placeholder="Chest Pain Type"></div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="trestbps" placeholder="Resting Blood Pressure (in mm Hg)">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="sex" placeholder="Sex (1 = Male; 0 = Female)">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="chol" placeholder="Serum Cholesterol (in mg/dl)">
-                        </div>
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="cp" placeholder="Chest Pain Type"></div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="fbs" placeholder="Fasting Blood Sugar > 120 mg/dl (1 = True; 0 = False)">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="restecg" placeholder="Resting Electrocardiograph Results">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="thalach" placeholder="Maximum Heart Rate Achieved">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="trestbps" placeholder="Resting Blood Pressure (in mm Hg)">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="exang" placeholder="Exercise Induced Angina (1 = Yes; 0 = No)">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="chol" placeholder="Serum Cholesterol (in mg/dl)">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="oldpeak" placeholder="ST Depression Induced by Exercise Relative to Rest">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="fbs" placeholder="Fasting Blood Sugar > 120 mg/dl (1 = True; 0 = False)">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="slope" placeholder="The Slope of the Peak Exercise ST Segment">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="restecg" placeholder="Resting Electrocardiograph Results">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="ca" placeholder="Number of Major Vessels (0-3) Colored by Fluoroscopy">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="thalach" placeholder="Maximum Heart Rate Achieved">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="exang" placeholder="Exercise Induced Angina (1 = Yes; 0 = No)">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="oldpeak" placeholder="ST Depression Induced by Exercise Relative to Rest">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="slope" placeholder="The Slope of the Peak Exercise ST Segment">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="ca" placeholder="Number of Major Vessels (0-3) Colored by Fluoroscopy">
                         </div>
                     </div>
                 </div>
@@ -91,11 +93,11 @@ body {
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="thal" placeholder="Thal: 1 = Normal; 2 = Fixed Defect; 3 = Reversible Defect">
+                            <input style="background-color: #ffffff;opacity: 0.8;border-radius: 25px;" class="form-control" type="text" name="thal" placeholder="Thal: 1 = Normal; 2 = Fixed Defect; 3 = Reversible Defect">
                         </div>
                     </div>
                 </div>
-                <input style="background-color: #4e0374" type="submit" class="btn btn-info btn-block" value="Predict">
+                <input style="background-color: black;opacity: 0.8;border-radius: 25px;" type="submit" class="btn btn-info btn-block" value="Predict">
             </form>
         </div>
     </div>

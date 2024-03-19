@@ -72,7 +72,7 @@ def predict(values, dic):
 
 @app.route("/")
 def home():
-    return render_template('home.html')
+    return render_template('home1.html')
 
 @app.route("/diabetes", methods=['GET', 'POST'])
 def diabetesPage():
@@ -107,7 +107,7 @@ def predictPage():
             pred = predict(to_predict_list, to_predict_dict)
     except Exception as e:
         message = str(e)
-        return render_template("home.html", message=message)
+        return render_template("home1.html", message=message)
 
     return render_template('predict.html', pred=pred)
 
